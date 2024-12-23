@@ -6,8 +6,8 @@
     "experimental": {
         "clash_api": {
             "external_controller": "0.0.0.0:9090",
-            "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/download/v1.30.0/dist.zip",
-            "external_ui_download_detour": "Proxy",
+            "external_ui_download_url": "https://gh-proxy.com/github.com/Zephyruso/zashboard/releases/download/v1.30.0/dist.zip",
+            "external_ui_download_detour": "Direct",
             "secret": "1234qwer",
             "default_mode": "rule",
             "access_control_allow_origin": "https://board.zash.run.place",
@@ -467,107 +467,107 @@
                 "type": "remote",
                 "tag": "geoip-openai",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-ai.srs"
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-ai.srs"
             },
             {
                 "type": "remote",
                 "tag": "geoip-youtube",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-yt.srs"
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-yt.srs"
             },
             {
                 "type": "remote",
                 "tag": "geoip-cn",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-cn.srs"
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-cn.srs"
             },
             {
                 "type": "remote",
                 "tag": "geoip-google",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-gg.srs",
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-gg.srs",
                 "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geoip-telegram",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-tg.srs",
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-tg.srs",
                 "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geoip-twitter",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-tw.srs",
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-tw.srs",
                 "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geoip-netflix",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-nf.srs",
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-nf.srs",
                 "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geosite-geolocation-cn",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-cn.srs"
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-cn.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-geolocation-!cn",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-!cn.srs"
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-!cn.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-youtube",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-youtube.srs",
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-youtube.srs",
                 "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geosite-openai",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-openai.srs",
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-openai.srs",
                 "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geosite-telegram",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-telegram.srs",
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-telegram.srs",
                 "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geosite-netflix",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-netflix.srs",
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-netflix.srs",
                 "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geosite-tencent",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-tencent.srs",
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-tencent.srs",
                 "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geosite-bilibili",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-bilibili.srs",
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-bilibili.srs",
                 "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geosite-dnsblock",
                 "format": "binary",
-                "url": "https://ghp.ci/github.com/TG-Twilight/AWAvenue-Ads-Rule/raw/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox.srs",
+                "url": "https://gh-proxy.com/github.com/TG-Twilight/AWAvenue-Ads-Rule/raw/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox.srs",
                 "download_detour": "Direct"
             }
         ],
