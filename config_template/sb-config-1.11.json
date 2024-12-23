@@ -467,19 +467,22 @@
                 "type": "remote",
                 "tag": "geoip-openai",
                 "format": "binary",
-                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-ai.srs"
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-ai.srs",
+                "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geoip-youtube",
                 "format": "binary",
-                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-yt.srs"
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-yt.srs",
+                "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geoip-cn",
                 "format": "binary",
-                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-cn.srs"
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-cn.srs",
+                "download_detour": "Direct"
             },
             {
                 "type": "remote",
@@ -513,13 +516,15 @@
                 "type": "remote",
                 "tag": "geosite-geolocation-cn",
                 "format": "binary",
-                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-cn.srs"
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-cn.srs",
+                "download_detour": "Direct"
             },
             {
                 "type": "remote",
                 "tag": "geosite-geolocation-!cn",
                 "format": "binary",
-                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-!cn.srs"
+                "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-!cn.srs",
+                "download_detour": "Direct"
             },
             {
                 "type": "remote",
