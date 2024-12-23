@@ -177,7 +177,7 @@
             "tag": "✈️ Proxy",
             "type": "selector",
             "outbounds": [
-                "Select",
+                "👉 Select",
                 "🇺🇸 US",
                 "🇯🇵 JP",
                 "🇨🇳 TW",
@@ -190,7 +190,7 @@
             "type": "selector",
             "tag": "openai",
             "outbounds": [
-                "Select",
+                "👉 Select",
                 "🇺🇸 US"
             ],
             "default": "🇺🇸 US"
@@ -199,7 +199,7 @@
             "type": "selector",
             "tag": "Telegram",
             "outbounds": [
-                "Select",
+                "👉 Select",
                 "🇸🇬 SG"
             ],
             "default": "🇸🇬 SG"
@@ -208,7 +208,7 @@
             "type": "selector",
             "tag": "youtube",
             "outbounds": [
-                "Select",
+                "👉 Select",
                 "🇺🇸 US",
                 "🇯🇵 JP",
                 "🇨🇳 TW",
@@ -237,7 +237,7 @@
         },
         {
             "type": "selector",
-            "tag": "Select",
+            "tag": "👉 Select",
             "outbounds": [
                 "🇺🇸 SS",
                 "🇺🇸 HY",
