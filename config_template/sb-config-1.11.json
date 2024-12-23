@@ -261,10 +261,8 @@
         {
             "type": "urltest",
             "tag": "🇨🇳 TW",
-            "providers": [
-                "TKV",
-                "SYN",
-                "MESL"
+            "outbounds": [
+                "{all}"
             ],
             "includes": "🇨🇳|台湾|TW|TAIWAN|Taiwan",
             "url": "http://www.google-analytics.com/generate_204",
@@ -273,10 +271,8 @@
         {
             "type": "urltest",
             "tag": "🇯🇵 JP",
-            "providers": [
-                "TKV",
-                "SYN",
-                "MESL"
+            "outbounds": [
+                "{all}"
             ],
             "includes": "🇯🇵|日本|JP|JAPAN|Japan",
             "url": "http://www.google-analytics.com/generate_204",
@@ -285,10 +281,8 @@
         {
             "type": "urltest",
             "tag": "🇸🇬 SG",
-            "providers": [
-                "TKV",
-                "SYN",
-                "MESL"
+            "outbounds": [
+                "{all}"
             ],
             "includes": "🇸🇬|新加坡|SG|SINGAPORE|Singapore",
             "interval": "30s",
@@ -298,10 +292,8 @@
         {
             "type": "urltest",
             "tag": "🇺🇸 US",
-            "providers": [
-                "TKV",
-                "SYN",
-                "MESL"
+            "outbounds": [
+                "{all}"
             ],
             "includes": "🇺🇸|美国|US|UNITED STATES|United States",
             "excludes": "Austria|Russia",
