@@ -223,7 +223,7 @@
             "outbounds": [
                 "🇺🇸 SS",
                 "🇺🇸 HY",
-                "ACA"
+                "{ACA}"
             ],
             "default": "🇺🇸 SS"
         },
@@ -231,7 +231,12 @@
             "type": "selector",
             "tag": "Select",
             "outbounds": [
-                "{all}"
+                "🇺🇸 SS",
+                "🇺🇸 HY",
+                "{MESL}",
+                "{SYN}",
+                "{TKV}",
+                "{ACA}"
             ]
         },
         {
@@ -248,7 +253,10 @@
             "type": "urltest",
             "url": "http://www.gstatic.com/generate_204",
             "outbounds": [
-                "{all}"
+                "{MESL}",
+                "{SYN}",
+                "{TKV}",
+                "{ACA}"
             ],
             "filter": [
                 {
@@ -264,7 +272,10 @@
             "tag": "🇨🇳 TW",
             "url": "http://www.gstatic.com/generate_204",
             "outbounds": [
-                "{all}"
+                "{MESL}",
+                "{SYN}",
+                "{TKV}",
+                "{ACA}"
             ],
             "filter": [
                 {
@@ -280,7 +291,10 @@
             "tag": "🇯🇵 JP",
             "url": "http://www.gstatic.com/generate_204",
             "outbounds": [
-                "{all}"
+                "{MESL}",
+                "{SYN}",
+                "{TKV}",
+                "{ACA}"
             ],
             "filter": [
                 {
@@ -295,7 +309,10 @@
             "type": "urltest",
             "tag": "🇸🇬 SG",
             "outbounds": [
-                "{all}"
+                "{MESL}",
+                "{SYN}",
+                "{TKV}",
+                "{ACA}"
             ],
             "filter": [
                 {
@@ -311,7 +328,10 @@
             "tag": "🇺🇸 US",
             "url": "http://www.gstatic.com/generate_204",
             "outbounds": [
-                "{all}"
+                "{MESL}",
+                "{SYN}",
+                "{TKV}",
+                "{ACA}"
             ],
             "filter": [
                 {
