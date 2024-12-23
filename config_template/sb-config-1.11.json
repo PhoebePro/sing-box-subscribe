@@ -245,7 +245,7 @@
         },
         {
             "tag": "🇭🇰 HK",
-            "type": "selector",
+            "type": "urltest",
             "outbounds": [
                 "{all}"
             ],
@@ -264,9 +264,14 @@
             "outbounds": [
                 "{all}"
             ],
-            "includes": "🇨🇳|台湾|TW|TAIWAN|Taiwan",
-            "url": "http://www.google-analytics.com/generate_204",
-            "tolerance": 20
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                       "🇨🇳|台湾|TW|TAIWAN|Taiwan"
+                    ]
+                }
+            ]
         },
         {
             "type": "urltest",
@@ -274,9 +279,14 @@
             "outbounds": [
                 "{all}"
             ],
-            "includes": "🇯🇵|日本|JP|JAPAN|Japan",
-            "url": "http://www.google-analytics.com/generate_204",
-            "tolerance": 20
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                       "🇯🇵|日本|JP|JAPAN|Japan"
+                    ]
+                }
+            ]
         },
         {
             "type": "urltest",
@@ -284,10 +294,14 @@
             "outbounds": [
                 "{all}"
             ],
-            "includes": "🇸🇬|新加坡|SG|SINGAPORE|Singapore",
-            "interval": "30s",
-            "url": "http://www.google-analytics.com/generate_204",
-            "tolerance": 20
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                       "🇸🇬|新加坡|SG|SINGAPORE|Singapore"
+                    ]
+                }
+            ]
         },
         {
             "type": "urltest",
@@ -295,11 +309,20 @@
             "outbounds": [
                 "{all}"
             ],
-            "includes": "🇺🇸|美国|US|UNITED STATES|United States",
-            "excludes": "Austria|Russia",
-            "interval": "30s",
-            "url": "http://www.google-analytics.com/generate_204",
-            "tolerance": 20
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                        "🇺🇸|美国|US|UNITED STATES|United States"
+                    ]
+                },
+                {
+                    "action": "exclude",
+                    "keywords": [
+                        "Austria|Russia"
+                    ]
+                }
+            ]
         },
         {
             "type": "shadowsocks",
