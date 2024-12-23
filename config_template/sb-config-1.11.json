@@ -25,7 +25,7 @@
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
                 "strategy": "ipv4_only",
-                "detour": "Proxy"
+                "detour": "✈️ Proxy"
             },
             {
                 "tag": "dns_direct",
@@ -174,7 +174,7 @@
     ],
     "outbounds": [
         {
-            "tag": "Proxy",
+            "tag": "✈️ Proxy",
             "type": "selector",
             "outbounds": [
                 "Select",
@@ -225,6 +225,14 @@
                 "🇺🇸 HY",
                 "{ACA}"
             ],
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                        "剩余|距离|到期"
+                    ]
+                }
+            ],
             "default": "🇺🇸 SS"
         },
         {
@@ -243,7 +251,7 @@
             "type": "selector",
             "outbounds": [
                 "Direct",
-                "Proxy",
+                "✈️ Proxy",
                 "🇺🇸 US"
             ]
         },
@@ -388,7 +396,7 @@
             },
             {
                 "clash_mode": "global",
-                "outbound": "Proxy"
+                "outbound": "✈️ Proxy"
             },
             {
                 "ip_cidr": [
@@ -438,7 +446,7 @@
                     "geosite-netflix",
                     "geosite-geolocation-!cn"
                 ],
-                "outbound": "Proxy"
+                "outbound": "✈️ Proxy"
             },
             {
                 "domain_suffix": [
@@ -576,7 +584,7 @@
                 "download_detour": "Direct"
             }
         ],
-        "final": "Proxy",
+        "final": "✈️ Proxy",
         "find_process": true,
         "auto_detect_interface": true
     }
