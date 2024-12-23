@@ -241,9 +241,17 @@
             "outbounds": [
                 "🇺🇸 SS",
                 "🇺🇸 HY",
-                "{NieP}",
+                "{TKV}",
                 "{Corn}",
-                "{TKV}"
+                "{NieP}"
+            ],
+            "filter": [
+                {
+                    "action": "exclude",
+                    "keywords": [
+                        "剩余|订阅|到期|客服|官网"
+                    ]
+                }
             ]
         },
         {
@@ -260,15 +268,21 @@
             "type": "urltest",
             "url": "http://www.gstatic.com/generate_204",
             "outbounds": [
-                "{NieP}",
+                "{TKV}",
                 "{Corn}",
-                "{TKV}"
+                "{NieP}"
             ],
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
                         "🇭🇰|HK|hk|香港|港|HongKong"
+                    ]
+                },
+                {
+                    "action": "exclude",
+                    "keywords": [
+                        "剩余|订阅|到期|客服|官网"
                     ]
                 }
             ]
@@ -278,15 +292,21 @@
             "tag": "🇨🇳 TW",
             "url": "http://www.gstatic.com/generate_204",
             "outbounds": [
-                "{NieP}",
+                "{TKV}",
                 "{Corn}",
-                "{TKV}"
+                "{NieP}"
             ],
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                       "🇨🇳|台湾|TW|TAIWAN|Taiwan"
+                        "🇨🇳|台湾|TW|TAIWAN|Taiwan"
+                    ]
+                },
+                {
+                    "action": "exclude",
+                    "keywords": [
+                        "剩余|订阅|到期|客服|官网"
                     ]
                 }
             ]
@@ -296,15 +316,21 @@
             "tag": "🇯🇵 JP",
             "url": "http://www.gstatic.com/generate_204",
             "outbounds": [
-                "{NieP}",
+                "{TKV}",
                 "{Corn}",
-                "{TKV}"
+                "{NieP}"
             ],
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                       "🇯🇵|日本|JP|JAPAN|Japan"
+                        "🇯🇵|日本|JP|JAPAN|Japan"
+                    ]
+                },
+                {
+                    "action": "exclude",
+                    "keywords": [
+                        "剩余|订阅|到期|客服|官网"
                     ]
                 }
             ]
@@ -313,15 +339,21 @@
             "type": "urltest",
             "tag": "🇸🇬 SG",
             "outbounds": [
-                "{NieP}",
+                "{TKV}",
                 "{Corn}",
-                "{TKV}"
+                "{NieP}"
             ],
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                       "🇸🇬|新加坡|SG|SINGAPORE|Singapore"
+                        "🇸🇬|新加坡|SG|SINGAPORE|Singapore"
+                    ]
+                },
+                {
+                    "action": "exclude",
+                    "keywords": [
+                        "剩余|订阅|到期|客服|官网"
                     ]
                 }
             ]
