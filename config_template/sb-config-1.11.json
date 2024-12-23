@@ -243,8 +243,8 @@
             "type": "selector",
             "outbounds": [
                 "Direct",
-                "🇺🇸 US",
-                "Proxy"
+                "Proxy",
+                "🇺🇸 US"
             ]
         },
         {
