@@ -227,7 +227,7 @@
             ],
             "filter": [
                 {
-                    "action": "include",
+                    "action": "exclude",
                     "keywords": [
                         "剩余|距离|到期"
                     ]
