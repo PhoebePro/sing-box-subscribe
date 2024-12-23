@@ -244,7 +244,7 @@
             "type": "selector",
             "outbounds": [
                 "Direct",
-                "America",
+                "🇺🇸 US",
                 "Proxy"
             ]
         },
