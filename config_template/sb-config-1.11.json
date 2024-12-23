@@ -238,7 +238,7 @@
             "tag": "Microsoft",
             "type": "selector",
             "outbounds": [
-                "direct",
+                "Direct",
                 "America",
                 "Proxy"
             ]
