@@ -255,8 +255,7 @@
             "outbounds": [
                 "{MESL}",
                 "{SYN}",
-                "{TKV}",
-                "{ACA}"
+                "{TKV}"
             ],
             "filter": [
                 {
@@ -274,8 +273,7 @@
             "outbounds": [
                 "{MESL}",
                 "{SYN}",
-                "{TKV}",
-                "{ACA}"
+                "{TKV}"
             ],
             "filter": [
                 {
@@ -293,8 +291,7 @@
             "outbounds": [
                 "{MESL}",
                 "{SYN}",
-                "{TKV}",
-                "{ACA}"
+                "{TKV}"
             ],
             "filter": [
                 {
@@ -311,8 +308,7 @@
             "outbounds": [
                 "{MESL}",
                 "{SYN}",
-                "{TKV}",
-                "{ACA}"
+                "{TKV}"
             ],
             "filter": [
                 {
@@ -330,8 +326,7 @@
             "outbounds": [
                 "{MESL}",
                 "{SYN}",
-                "{TKV}",
-                "{ACA}"
+                "{TKV}"
             ],
             "filter": [
                 {
