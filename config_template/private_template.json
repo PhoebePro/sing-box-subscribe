@@ -1,7 +1,9 @@
 {
     "log": {
-        "level": "error",
-        "timestamp": true
+      "disabled": false,
+      "level": "warn",
+      "output": "/sing-box.log",
+      "timestamp": true
     },
     "experimental": {
         "clash_api": {
@@ -19,131 +21,132 @@
         }
     },
     "dns": {
-        "servers": [
-            {
-                "tag": "dns_proxy",
-                "address": "https://1.1.1.1/dns-query",
-                "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only",
-                "detour": "✈️ Proxy"
-            },
-            {
-                "tag": "dns_direct",
-                "address": "https://doh.pub/dns-query",
-                "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only",
-                "detour": "Direct"
-            },
-            {
-                "tag": "dns_resolver",
-                "address": "119.29.29.29",
-                "strategy": "ipv4_only",
-                "detour": "Direct"
-            }
+    "servers": [
+      {
+        "tag": "dns_proxy",
+        "address": "https://dns.google/dns-query",
+        "address_resolver": "dns_direct",
+        "address_strategy": "ipv4_only",
+        "strategy": "ipv4_only",
+        "client_subnet": "1.0.1.0"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "223.5.5.5",
+        "detour": "Direct"
+      },
+      {
+        "tag": "system-dns",
+        "address": "local",
+        "detour": "Direct"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "dns_direct"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "dns_direct"
+      },
+      {
+        "clash_mode": "global",
+        "server": "dns_proxy"
+      },
+      {
+        "rule_set": "geosite-dnsblock",
+        "action": "reject",
+        "method": "default"
+      },
+      {
+        "domain": [
+          "p2p.qq.com",
+          "p2ptun.qq.com",
+          "p2pupdate.gamedl.qq.com",
+          "pcdn.yximgs.com",
+          "p2p.douyin.com",
+          "onethingpcs.com",
+          "kuiniuca.com"
         ],
-        "rules": [
-            {
-                "outbound": "any",
-                "server": "dns_resolver"
-            },
-            {
-                "clash_mode": "direct",
-                "server": "dns_direct"
-            },
-            {
-                "clash_mode": "global",
-                "server": "dns_proxy"
-            },
-            {
-                "rule_set": "geosite-dnsblock",
-                "action": "reject",
-                "method": "default"
-            },
-            {
-                "domain": [
-                    "p2p.qq.com",
-                    "p2ptun.qq.com",
-                    "p2pupdate.gamedl.qq.com",
-                    "pcdn.yximgs.com",
-                    "p2p.douyin.com",
-                    "onethingpcs.com",
-                    "kuiniuca.com"
-                ],
-                "domain_suffix": [
-                    "uhabo.com",
-                    "xycdn.com"
-                ],
-                "action": "reject",
-                "method": "default"
-            },
-            {
-                "network": "tcp",
-                "port": 853,
-                "action": "reject",
-                "method": "default"
-            },
-            {
-                "network": "udp",
-                "port": 443,
-                "action": "reject",
-                "method": "default"
-            },
-            {
-                "domain_suffix": [
-                    "icloudnative.io",
-                    "fuckcloudnative.io",
-                    "sealos.io",
-                    "cdn.jsdelivr.net",
-                    "emby.wtf",
-                    "term.wtf",
-                    "makima.online",
-                    "zxxk.com",
-                    "xkw.com"
-                ],
-                "ip_is_private": true,
-                "rule_set": [
-                    "geosite-tencent",
-                    "geosite-bilibili",
-                    "geosite-geolocation-cn",
-                    "geoip-cn"
-                ],
-                "server": "dns_direct"
-            },
-            {
-                "query_type": "CNAME",
-                "domain_suffix": [
-                    "synn.cc",
-                    "ping0.cc",
-                    "aca.best",
-                    "acaisbest.com",
-                    "122777.xyz",
-                    "emby.aca.best",
-                    "misakaf.org",
-                    "nanflix.net"
-                ],
-                "ip_cidr": [
-                    "91.108.16.0/22",
-                    "91.108.56.0/22"
-                ],
-                "rule_set": [
-                    "geoip-youtube",
-                    "geoip-google",
-                    "geoip-twitter",
-                    "geoip-netflix",
-                    "geosite-youtube",
-                    "geosite-netflix",
-                    "geosite-geolocation-!cn",
-                    "geosite-telegram",
-                    "geoip-telegram",
-                    "geosite-openai",
-                    "geoip-openai"
-                ],
-                "server": "dns_proxy"
-            }
+        "domain_suffix": [
+          "uhabo.com",
+          "xycdn.com"
         ],
-        "final": "dns_direct",
-        "independent_cache": true
-    },
+        "action": "reject",
+        "method": "default"
+      },
+      {
+        "network": "tcp",
+        "port": 853,
+        "action": "reject",
+        "method": "default"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "action": "reject",
+        "method": "default"
+      },
+      {
+        "domain_suffix": [
+          "icloudnative.io",
+          "fuckcloudnative.io",
+          "sealos.io",
+          "cdn.jsdelivr.net",
+          "emby.wtf",
+          "term.wtf",
+          "makima.online",
+          "zxxk.com",
+          "xkw.com"
+        ],
+        "ip_is_private": true,
+        "rule_set": [
+          "geosite-tencent",
+          "geosite-bilibili",
+          "geosite-geolocation-cn",
+          "geoip-cn"
+        ],
+        "server": "dns_direct"
+      },
+      {
+        "query_type": "CNAME",
+        "domain_suffix": [
+          "synn.cc",
+          "ping0.cc",
+          "aca.best",
+          "acaisbest.com",
+          "122777.xyz",
+          "emby.aca.best",
+          "misakaf.org",
+          "nanflix.net"
+        ],
+        "ip_cidr": [
+          "91.108.16.0/22",
+          "91.108.56.0/22"
+        ],
+        "rule_set": [
+          "geoip-youtube",
+          "geoip-google",
+          "geoip-twitter",
+          "geoip-netflix",
+          "geosite-youtube",
+          "geosite-netflix",
+          "geosite-geolocation-!cn",
+          "geosite-telegram",
+          "geoip-telegram",
+          "geosite-openai",
+          "geoip-openai"
+        ],
+        "server": "dns_proxy"
+      }
+    ],
+    "strategy": "ipv4_only",
+    "disable_cache": false,
+    "disable_expire": false,
+    "independent_cache": false,
+    "final": "dns_proxy"
+  },
     "ntp": {
         "enabled": true,
         "interval": "30m0s",
