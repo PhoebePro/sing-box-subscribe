@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, Response
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, Response, send_file
 from urllib.parse import quote, urlparse, unquote
 import json
 import os
@@ -344,3 +344,24 @@ def download_config():
 """
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
+
+@app.route('/download_config', methods=['GET'])
+def download_config():
+    try:
+        config_file_name = json.loads(os.environ['TEMP_JSON_DATA']).get("save_config_path", "config.json")
+        
+        # 判断路径是否是相对路径，确保文件存在
+        if config_file_name.startswith("./"):
+            config_file_name = config_file_name[2:]
+
+        config_file_path = os.path.join('/tmp/', config_file_name)
+        
+        # 检查文件是否存在
+        if not os.path.exists(config_file_path):
+            return jsonify({'status': 'error', 'message': '配置文件不存在或已过期'}), 404
+        
+        # 使用 send_file 将 JSON 文件作为附件返回
+        return send_file(config_file_path, as_attachment=True, download_name=config_file_name)
+    
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)}), 500
