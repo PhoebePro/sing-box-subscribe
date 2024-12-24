@@ -2,7 +2,7 @@
     "log": {
       "disabled": false,
       "level": "warn",
-      "output": "/sing-box.log",
+      "output": "sing-box.log",
       "timestamp": true
     },
     "experimental": {
