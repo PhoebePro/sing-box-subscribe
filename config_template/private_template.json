@@ -439,7 +439,7 @@
             },
             {
         "type": "logical",
-        "mode": "and",
+        "mode": "or",
         "rules": [
           {
             "domain_suffix": [
@@ -468,7 +468,7 @@
       },
             {
         "type": "logical",
-        "mode": "and",
+        "mode": "or",
         "rules": [
           {
             "domain_suffix": [
