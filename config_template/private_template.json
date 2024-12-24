@@ -128,15 +128,18 @@
         "rule_set": [
           "geoip-youtube",
           "geoip-google",
+          "geoip-github",
           "geoip-twitter",
           "geoip-netflix",
+          "geoip-openai",
           "geosite-youtube",
           "geosite-netflix",
           "geosite-geolocation-!cn",
           "geosite-telegram",
           "geoip-telegram",
           "geosite-openai",
-          "geoip-openai"
+          "geosite-google",
+          "geosite-github"
         ],
         "server": "dns_proxy"
       }
@@ -435,43 +438,66 @@
                 "outbound": "youtube"
             },
             {
-                "domain_suffix": [
-                    "synn.cc",
-                    "ping0.cc",
-                    "aca.best",
-                    "acaisbest.com",
-                    "122777.xyz"
-                ],
-                "rule_set": [
-                    "geoip-google",
-                    "geoip-twitter",
-                    "geoip-netflix",
-                    "geosite-netflix",
-                    "geosite-geolocation-!cn"
-                ],
-                "outbound": "✈️ Proxy"
-            },
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "domain_suffix": [
+              "synn.cc",
+              "ping0.cc",
+              "aca.best",
+              "acaisbest.com",
+              "122777.xyz"
+            ]
+          },
+          {
+            "rule_set": [
+              "geoip-google",
+              "geoip-github",
+              "geoip-twitter",
+              "geoip-netflix",
+              "geosite-google",
+              "geosite-github",
+              "geosite-netflix",
+              "geosite-geolocation-!cn"
+            ]
+          }
+        ],
+        "action": "route",
+        "outbound": "✈️ Proxy"
+      },
             {
-                "domain_suffix": [
-                    "icloudnative.io",
-                    "fuckcloudnative.io",
-                    "sealos.io",
-                    "cdn.jsdelivr.net",
-                    "emby.wtf",
-                    "term.wtf",
-                    "makima.online",
-                    "zxxk.com",
-                    "xkw.com"
-                ],
-                "ip_is_private": true,
-                "rule_set": [
-                    "geosite-tencent",
-                    "geosite-bilibili",
-                    "geosite-geolocation-cn",
-                    "geoip-cn"
-                ],
-                "outbound": "Direct"
-            }
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "domain_suffix": [
+              "icloudnative.io",
+              "fuckcloudnative.io",
+              "sealos.io",
+              "cdn.jsdelivr.net",
+              "emby.wtf",
+              "term.wtf",
+              "makima.online",
+              "zxxk.com",
+              "xkw.com"
+            ]
+          },
+          {
+            "ip_is_private": true
+          },
+          {
+            "rule_set": [
+              "geosite-tencent",
+              "geosite-bilibili",
+              "geosite-geolocation-cn",
+              "geoip-cn"
+            ]
+          }
+        ],
+        "action": "route",
+        "outbound": "Direct"
+      }
         ],
         "rule_set": [
             {
@@ -501,6 +527,13 @@
                 "format": "binary",
                 "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-gg.srs",
                 "download_detour": "Direct"
+            },
+            {
+              "type": "remote",
+              "tag": "geoip-github",
+              "format": "binary",
+              "url": "https://gh-proxy.com/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-gh.srs",
+              "download_detour": "Direct"
             },
             {
                 "type": "remote",
@@ -536,6 +569,20 @@
                 "format": "binary",
                 "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-!cn.srs",
                 "download_detour": "Direct"
+            },
+            {
+              "type": "remote",
+              "tag": "geosite-google",
+              "format": "binary",
+              "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-google.srs",
+              "download_detour": "Direct"
+            },
+            {
+              "type": "remote",
+              "tag": "geosite-github",
+              "format": "binary",
+              "url": "https://gh-proxy.com/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-github.srs",
+              "download_detour": "Direct"
             },
             {
                 "type": "remote",
