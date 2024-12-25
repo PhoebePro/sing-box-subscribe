@@ -98,7 +98,20 @@
           "term.wtf",
           "makima.online",
           "zxxk.com",
-          "xkw.com"
+          "xkw.com",
+          "ibllc.com",
+          "ibkr.com",
+          "cncbinternational.com",
+          "hongkongpost.hk",
+          "chinatelecom.com.hk",
+          "ctcmo.com",
+          "1888.com",
+          "hsbc.com.hk",
+          "boccc.com.hk",
+          "bochk.com",
+          "interactivebrokers.com",
+          "epicgames.com",
+          "loungekey.com"
         ],
         "ip_is_private": true,
         "rule_set": [
@@ -119,7 +132,9 @@
           "122777.xyz",
           "emby.aca.best",
           "misakaf.org",
-          "nanflix.net"
+          "nanflix.net",
+          "emby-micax-ca-v2.mius.uk",
+          "cardinalcommerce.com"
         ],
         "ip_cidr": [
           "91.108.16.0/22",
@@ -226,7 +241,8 @@
             "outbounds": [
                 "🇺🇸 SS",
                 "🇺🇸 HY",
-                "{ACA}"
+                "{ACA}",
+                "Direct"
             ],
             "filter": [
                 {
@@ -434,6 +450,10 @@
                 "outbound": "✈️ Proxy"
             },
             {
+                "domain_suffix": "cardinalcommerce.com",
+                "outbound": "👉 Select"
+            }
+            {
                 "ip_cidr": [
                     "91.108.16.0/22",
                     "91.108.56.0/22"
@@ -448,7 +468,8 @@
                 "domain_suffix": [
                     "emby.aca.best",
                     "misakaf.org",
-                    "nanflix.net"
+                    "nanflix.net",
+                    "emby-micax-ca-v2.mius.uk"
                 ],
                 "outbound": "Emby"
             },
@@ -493,7 +514,20 @@
                     "term.wtf",
                     "makima.online",
                     "zxxk.com",
-                    "xkw.com"
+                    "xkw.com",
+                    "ibllc.com",
+                    "ibkr.com",
+                    "cncbinternational.com",
+                    "hongkongpost.hk",
+                    "chinatelecom.com.hk",
+                    "ctcmo.com",
+                    "1888.com",
+                    "hsbc.com.hk",
+                    "boccc.com.hk",
+                    "bochk.com",
+                    "interactivebrokers.com",
+                    "epicgames.com",
+                    "loungekey.com"
                 ],
                 "ip_is_private": true,
                 "rule_set": [
