@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, Response
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, Response, send_file, make_response
 from urllib.parse import quote, urlparse, unquote
 import json
 import os
@@ -305,6 +305,9 @@ def generate_config():
                 flash('配置文件生成成功', 'success')
                 flash('Tạo file cấu hình thành công', 'Thành công^^')
         config_data = json.loads(config_content)
+        # add file download
+        return send_file(config_file_path, as_attachment=True, download_name=config_file_name)
+        
         return Response(config_content, content_type='text/plain; charset=utf-8')
     except subprocess.CalledProcessError as e:
         os.environ['TEMP_JSON_DATA'] = json.dumps(json.loads(data_json['TEMP_JSON_DATA']), indent=4, ensure_ascii=False)
