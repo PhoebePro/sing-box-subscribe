@@ -306,7 +306,7 @@ def generate_config():
                 flash('Tạo file cấu hình thành công', 'Thành công^^')
         config_data = json.loads(config_content)
         # add file download
-        return send_file(config_file_path, as_attachment=True, download_name=config_file_name)
+        return send_file(config_file_path, as_attachment=True, download_name=CONFIG_FILE_NAME )
         
         return Response(config_content, content_type='text/plain; charset=utf-8')
     except subprocess.CalledProcessError as e:
