@@ -77,8 +77,8 @@ def update_providers():
         new_providers_data = json.loads(request.form.get('providers_data'))
         # 更新providers.json文件
         write_providers_json(new_providers_data)
-        flash('Providers.json文件已更新', 'success')
-        flash('File Providers.json đã được cập nhật', 'Thành công^^')
+        #flash('Providers.json文件已更新', 'success')
+        #flash('File Providers.json đã được cập nhật', 'Thành công^^')
     except Exception as e:
         flash(f'更新Providers.json文件时出错；{str(e)}', 'error')
         flash(f'Có lỗi khi cập nhật file Providers.json; {str(e)}', 'Lỗi!!!')
@@ -99,12 +99,12 @@ def edit_temp_json():
             else:
                 return jsonify({'status': 'error', 'message': 'TEMP_JSON_DATA 不能为空(không thể trống)'}, content_type='application/json; charset=utf-8')  # 返回错误状态和消息
         except Exception as e:
-            flash('TEMP_JSON_DATA 不能为空', 'error')
-            flash('TEMP_JSON_DATA 格式出错：注意订阅链接末尾不要有换行，要在双引号""里面！！！')
-            flash('TEMP_JSON_DATA không thể trống', 'Lỗi!!!')
-            flash('Lỗi định dạng TEMP_JSON_DATA: lưu ý rằng liên kết đăng ký không được có ký tự xuống dòng ở cuối, mà phải nằm trong dấu ngoặc kép ""')
-            flash('TEMP_JSON_DATA cannot be empty', 'error')
-            flash(f'Error updating TEMP_JSON_DATA: note that the subscription link should not have a newline at the end, but should be inside double quotes ""')
+            #flash('TEMP_JSON_DATA 不能为空', 'error')
+            #flash('TEMP_JSON_DATA 格式出错：注意订阅链接末尾不要有换行，要在双引号""里面！！！')
+            #flash('TEMP_JSON_DATA không thể trống', 'Lỗi!!!')
+            #flash('Lỗi định dạng TEMP_JSON_DATA: lưu ý rằng liên kết đăng ký không được có ký tự xuống dòng ở cuối, mà phải nằm trong dấu ngoặc kép ""')
+            #flash('TEMP_JSON_DATA cannot be empty', 'error')
+            #flash(f'Error updating TEMP_JSON_DATA: note that the subscription link should not have a newline at the end, but should be inside double quotes ""')
             return jsonify({'status': 'error', 'message': str(e)})  # 返回错误状态和消息
 
 @app.route('/config/<path:url>', methods=['GET'])
@@ -303,10 +303,10 @@ def generate_config():
             config_content = config_file.read()
             if config_content:
                 flash('配置文件生成成功', 'success')
-                flash('Tạo file cấu hình thành công', 'Thành công^^')
+                #flash('Tạo file cấu hình thành công', 'Thành công^^')
         config_data = json.loads(config_content)
         # add file download
-        return send_file(config_file_path, as_attachment=True, download_name=CONFIG_FILE_NAME )
+        #return send_file(config_file_path, as_attachment=True, download_name=CONFIG_FILE_NAME )
         
         return Response(config_content, content_type='text/plain; charset=utf-8')
     except subprocess.CalledProcessError as e:
@@ -328,7 +328,7 @@ def clear_temp_json_data():
         flash(f'Có lỗi khi làm trống TEMP_JSON_DATA: {str(e)}', 'Lỗi!!!')
     return jsonify({'status': 'success'})
 
-"""
+
 @app.route('/download_config', methods=['GET'])
 def download_config():
     try:
@@ -344,6 +344,6 @@ def download_config():
             return redirect(url_for('index'))
     except Exception as e:
         return str(e)  # 或者适当处理异常，例如返回一个错误页面
-"""
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
