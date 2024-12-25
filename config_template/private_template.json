@@ -227,6 +227,7 @@
             "type": "selector",
             "tag": "Emby",
             "outbounds": [
+                "Direct",
                 "🇺🇸 SS",
                 "🇺🇸 HY",
                 "{ACA}"
