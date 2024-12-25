@@ -328,7 +328,7 @@ def clear_temp_json_data():
         flash(f'Có lỗi khi làm trống TEMP_JSON_DATA: {str(e)}', 'Lỗi!!!')
     return jsonify({'status': 'success'})
 
-'''
+"""
 @app.route('/download_config', methods=['GET'])
 def download_config():
     try:
@@ -344,6 +344,6 @@ def download_config():
             return redirect(url_for('index'))
     except Exception as e:
         return str(e)  # 或者适当处理异常，例如返回一个错误页面
-'''
+"""
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
