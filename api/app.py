@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, Response, send_file, make_response
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, Response
 from urllib.parse import quote, urlparse, unquote
 import json
 import os
@@ -18,10 +18,10 @@ data_json['TEMP_JSON_DATA'] = '{"subscribes":[{"url":"URL","tag":"tag_1","enable
 # 获取系统默认的临时目录路径
 TEMP_DIR = tempfile.gettempdir()
 
-
+"""
 # 存储配置文件的过期时间（10分钟）
-config_expiry_time = 30s
-
+config_expiry_time = None
+"""
 
 def cleanup_temp_config():
     global config_expiry_time, config_file_path
@@ -77,8 +77,8 @@ def update_providers():
         new_providers_data = json.loads(request.form.get('providers_data'))
         # 更新providers.json文件
         write_providers_json(new_providers_data)
-        #flash('Providers.json文件已更新', 'success')
-        #flash('File Providers.json đã được cập nhật', 'Thành công^^')
+        flash('Providers.json文件已更新', 'success')
+        flash('File Providers.json đã được cập nhật', 'Thành công^^')
     except Exception as e:
         flash(f'更新Providers.json文件时出错；{str(e)}', 'error')
         flash(f'Có lỗi khi cập nhật file Providers.json; {str(e)}', 'Lỗi!!!')
@@ -99,12 +99,12 @@ def edit_temp_json():
             else:
                 return jsonify({'status': 'error', 'message': 'TEMP_JSON_DATA 不能为空(không thể trống)'}, content_type='application/json; charset=utf-8')  # 返回错误状态和消息
         except Exception as e:
-            #flash('TEMP_JSON_DATA 不能为空', 'error')
-            #flash('TEMP_JSON_DATA 格式出错：注意订阅链接末尾不要有换行，要在双引号""里面！！！')
-            #flash('TEMP_JSON_DATA không thể trống', 'Lỗi!!!')
-            #flash('Lỗi định dạng TEMP_JSON_DATA: lưu ý rằng liên kết đăng ký không được có ký tự xuống dòng ở cuối, mà phải nằm trong dấu ngoặc kép ""')
-            #flash('TEMP_JSON_DATA cannot be empty', 'error')
-            #flash(f'Error updating TEMP_JSON_DATA: note that the subscription link should not have a newline at the end, but should be inside double quotes ""')
+            flash('TEMP_JSON_DATA 不能为空', 'error')
+            flash('TEMP_JSON_DATA 格式出错：注意订阅链接末尾不要有换行，要在双引号""里面！！！')
+            flash('TEMP_JSON_DATA không thể trống', 'Lỗi!!!')
+            flash('Lỗi định dạng TEMP_JSON_DATA: lưu ý rằng liên kết đăng ký không được có ký tự xuống dòng ở cuối, mà phải nằm trong dấu ngoặc kép ""')
+            flash('TEMP_JSON_DATA cannot be empty', 'error')
+            flash(f'Error updating TEMP_JSON_DATA: note that the subscription link should not have a newline at the end, but should be inside double quotes ""')
             return jsonify({'status': 'error', 'message': str(e)})  # 返回错误状态和消息
 
 @app.route('/config/<path:url>', methods=['GET'])
@@ -303,8 +303,9 @@ def generate_config():
             config_content = config_file.read()
             if config_content:
                 flash('配置文件生成成功', 'success')
-                #flash('Tạo file cấu hình thành công', 'Thành công^^')
+                flash('Tạo file cấu hình thành công', 'Thành công^^')
         config_data = json.loads(config_content)
+
         # add file download
         return send_file(config_file_path, as_attachment=True, download_name=CONFIG_FILE_NAME )
         
