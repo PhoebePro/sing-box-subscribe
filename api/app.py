@@ -307,7 +307,11 @@ def generate_config():
         config_data = json.loads(config_content)
 
         # add file download
-        # return send_file(config_file_path, as_attachment=True, download_name=CONFIG_FILE_NAME )
+        return send_file(config_file_path, as_attachment=True, download_name=CONFIG_FILE_NAME )
+
+        response = send_file(config_file_path, as_attachment=True, download_name=CONFIG_FILE_NAME)
+        os.remove(config_file_path)  # 下载后删除
+        return response
         
         return Response(config_content, content_type='text/plain; charset=utf-8')
     except subprocess.CalledProcessError as e:
