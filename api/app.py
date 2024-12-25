@@ -18,10 +18,10 @@ data_json['TEMP_JSON_DATA'] = '{"subscribes":[{"url":"URL","tag":"tag_1","enable
 # 获取系统默认的临时目录路径
 TEMP_DIR = tempfile.gettempdir()
 
-"""
+
 # 存储配置文件的过期时间（10分钟）
-config_expiry_time = None
-"""
+config_expiry_time = 30s
+
 
 def cleanup_temp_config():
     global config_expiry_time, config_file_path
@@ -306,7 +306,7 @@ def generate_config():
                 #flash('Tạo file cấu hình thành công', 'Thành công^^')
         config_data = json.loads(config_content)
         # add file download
-        #return send_file(config_file_path, as_attachment=True, download_name=CONFIG_FILE_NAME )
+        return send_file(config_file_path, as_attachment=True, download_name=CONFIG_FILE_NAME )
         
         return Response(config_content, content_type='text/plain; charset=utf-8')
     except subprocess.CalledProcessError as e:
@@ -328,7 +328,7 @@ def clear_temp_json_data():
         flash(f'Có lỗi khi làm trống TEMP_JSON_DATA: {str(e)}', 'Lỗi!!!')
     return jsonify({'status': 'success'})
 
-
+'''
 @app.route('/download_config', methods=['GET'])
 def download_config():
     try:
@@ -344,6 +344,6 @@ def download_config():
             return redirect(url_for('index'))
     except Exception as e:
         return str(e)  # 或者适当处理异常，例如返回一个错误页面
-
+'''
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
