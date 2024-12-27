@@ -321,8 +321,7 @@
             "tag": "🇸🇬 SG",
             "outbounds": [
                 "{MESL}",
-                "{SYN}",
-                "{TKV}"
+                "{SYN}"
             ],
             "filter": [
                 {
