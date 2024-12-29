@@ -24,27 +24,19 @@
     "servers": [
       {
         "tag": "dns_proxy",
-        "address": "https://dns.google/dns-query",
-        "address_resolver": "dns_direct",
-        "address_strategy": "ipv4_only",
-        "strategy": "ipv4_only",
-        "client_subnet": "1.0.1.0"
+        "address": "https:\/\/1.1.1.1\/dns-query",
+        "detour": "✈️ Proxy"
       },
       {
         "tag": "dns_direct",
-        "address": "119.29.29.29",
-        "detour": "Direct"
-      },
-      {
-        "tag": "system-dns",
-        "address": "local",
+        "address": "https:\/\/223.5.5.5\/dns-query",
         "detour": "Direct"
       }
     ],
     "rules": [
       {
         "outbound": "any",
-        "server": "system-dns"
+        "server": "dns_direct"
       },
       {
         "clash_mode": "direct",
