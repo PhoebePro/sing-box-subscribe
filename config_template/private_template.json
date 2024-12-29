@@ -44,7 +44,7 @@
     "rules": [
       {
         "outbound": "any",
-        "server": "dns_direct"
+        "server": "system-dns"
       },
       {
         "clash_mode": "direct",
