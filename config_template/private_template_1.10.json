@@ -495,109 +495,109 @@
         "type": "remote",
         "tag": "geoip-openai",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/ai.srs"
+        "url": "https://github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-ai.srs"
       },
       {
         "type": "remote",
         "tag": "geoip-youtube",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/yt.srs"
+        "url": "https://github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-yt.srs"
       },
       {
         "type": "remote",
         "tag": "geoip-cn",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/cn.srs"
+        "url": "https://github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-cn.srs"
       },
       {
         "type": "remote",
         "tag": "geoip-google",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/google.srs"
+        "url": "https://github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-gg.srs"
       },
       {
         "type": "remote",
         "tag": "geoip-github",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/gh.srs"
+        "url": "https://github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-gh.srs"
       },
       {
         "type": "remote",
         "tag": "geoip-telegram",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/telegram.srs"
+        "url": "https://github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-tg.srs"
       },
       {
         "type": "remote",
         "tag": "geoip-twitter",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/twitter.srs"
+        "url": "https://github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-tw.srs"
       },
       {
         "type": "remote",
         "tag": "geoip-netflix",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/netflix.srs"
+        "url": "https://github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-nf.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-geolocation-cn",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/geolocation-cn.srs"
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-cn.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-geolocation-!cn",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/geolocation-!cn.srs"
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-!cn.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-google",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/google.srs"
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-google.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-github",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/github.srs"
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-github.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-youtube",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/youtube.srs"
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-youtube.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-openai",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/openai.srs"
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-openai.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-telegram",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/telegram.srs"
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-telegram.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-netflix",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/netflix.srs"
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-netflix.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-tencent",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/tencent.srs"
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-tencent.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-bilibili",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/bilibili.srs"
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-bilibili.srs"
       },
       {
         "type": "remote",
