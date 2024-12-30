@@ -110,8 +110,7 @@
           "122777.xyz",
           "emby.aca.best",
           "misakaf.org",
-          "nanflix.net",
-          "github.com"
+          "nanflix.net"
         ],
         "ip_cidr": [
           "91.108.16.0/22",
@@ -441,8 +440,7 @@
               "ping0.cc",
               "aca.best",
               "acaisbest.com",
-              "122777.xyz",
-              "github.com"
+              "122777.xyz"
             ]
           },
           {
