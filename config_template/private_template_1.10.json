@@ -456,7 +456,6 @@
             ]
           }
         ],
-        "action": "route",
         "outbound": "✈️ Proxy"
       },
       {
@@ -488,7 +487,6 @@
             ]
           }
         ],
-        "action": "route",
         "outbound": "Direct"
       }
     ],
