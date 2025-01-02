@@ -241,7 +241,7 @@
         "🇺🇸 SS",
         "🇺🇸 HY",
         "{MESL}",
-        "{SYN}",
+        "{IFUN}",
         "{TKV}"
       ]
     },
@@ -260,7 +260,7 @@
       "url": "http://www.gstatic.com/generate_204",
       "outbounds": [
         "{MESL}",
-        "{SYN}",
+        "{IFUN}",
         "{TKV}"
       ],
       "filter": [
@@ -278,7 +278,7 @@
       "url": "http://www.gstatic.com/generate_204",
       "outbounds": [
         "{MESL}",
-        "{SYN}",
+        "{IFUN}",
         "{TKV}"
       ],
       "filter": [
@@ -296,7 +296,7 @@
       "url": "http://www.gstatic.com/generate_204",
       "outbounds": [
         "{MESL}",
-        "{SYN}",
+        "{IFUN}",
         "{TKV}"
       ],
       "filter": [
@@ -313,7 +313,7 @@
       "tag": "🇸🇬 SG",
       "outbounds": [
         "{MESL}",
-        "{SYN}"
+        "{IFUN}"
       ],
       "filter": [
         {
@@ -330,7 +330,7 @@
       "url": "http://www.gstatic.com/generate_204",
       "outbounds": [
         "{MESL}",
-        "{SYN}",
+        "{IFUN}",
         "{TKV}"
       ],
       "filter": [
