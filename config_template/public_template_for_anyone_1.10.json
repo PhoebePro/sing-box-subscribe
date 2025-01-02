@@ -9,7 +9,7 @@
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
       "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
-      "secret": "1234qwer",
+      "secret": "",
       "default_mode": "rule",
       "access_control_allow_origin": "https://board.zash.run.place",
       "access_control_allow_private_network": true
@@ -229,8 +229,7 @@
             "剩余|距离|到期|HA"
           ]
         }
-      ],
-      "default": "🇺🇸 SS"
+      ]
     },
     {
       "type": "selector",
