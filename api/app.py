@@ -285,7 +285,6 @@ def generate_config():
         selected_template_index = request.form.get('template_index')
         if not selected_template_index:
             flash('请选择一个配置模板', 'error')
-            flash('Vui lòng chọn một mẫu cấu hình', 'Lỗi!!!')
             return redirect(url_for('index'))
         temp_json_data = json.dumps(os.environ['TEMP_JSON_DATA'], indent=4, ensure_ascii=False)
         # 修改这里：执行main.py并传递模板序号作为命令行参数，如果未指定，则传递空字符串
