@@ -219,8 +219,6 @@
       "tag": "Emby",
       "outbounds": [
         "Direct",
-        "🇺🇸 SS",
-        "🇺🇸 HY",
         "{ACA}"
       ],
       "filter": [
@@ -230,15 +228,12 @@
             "剩余|距离|到期"
           ]
         }
-      ],
-      "default": "🇺🇸 SS"
+      ]
     },
     {
       "type": "selector",
       "tag": "👉 Select",
       "outbounds": [
-        "🇺🇸 SS",
-        "🇺🇸 HY",
         "{MESL}",
         "{SYN}",
         "{TKV}"
@@ -346,32 +341,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 SS",
-      "server": "107.174.253.125",
-      "server_port": 43579,
-      "method": "2022-blake3-aes-128-gcm",
-      "password": "qc925PAN3VPpLOtZo0aC1Q==",
-      "multiplex": {
-        "enabled": true,
-        "padding": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 HY",
-      "server": "107.174.253.125",
-      "server_port": 8443,
-      "up_mbps": 30,
-      "down_mbps": 150,
-      "password": "pearce123",
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true
-      }
     },
     {
       "type": "direct",
