@@ -220,8 +220,6 @@
       "tag": "Emby",
       "outbounds": [
         "Direct",
-        "🇺🇸 SS",
-        "🇺🇸 HY",
         "{ACA}"
       ],
       "filter": [
@@ -231,15 +229,12 @@
             "剩余|距离|到期|HA"
           ]
         }
-      ],
-      "default": "🇺🇸 SS"
+      ]
     },
     {
       "type": "selector",
       "tag": "👉 Select",
       "outbounds": [
-        "🇺🇸 SS",
-        "🇺🇸 HY",
         "{MESL}",
         "{IFUN}",
         "{TKV}"
