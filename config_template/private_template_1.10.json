@@ -7,13 +7,9 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "0.0.0.0:9090",
-      "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
-      "secret": "1234qwer",
-      "default_mode": "rule",
-      "access_control_allow_origin": "https://board.zash.run.place",
-      "access_control_allow_private_network": true
-    },
+          "external_controller": "0.0.0.0:9090",
+          "default_mode": "rule"
+      },
     "cache_file": {
       "enabled": true,
       "store_rdrc": true
@@ -22,18 +18,20 @@
   "dns": {
     "servers": [
       {
-        "tag": "dns_proxy",
-        "address": "https:\/\/1.1.1.1\/dns-query",
-        "detour": "✈️ Proxy"
-      },
+                "tag": "dns_proxy",
+                "address": "1.1.1.1",
+                "strategy": "ipv4_only",
+                "detour": "👉 Select"
+            },
       {
-        "tag": "dns_direct",
-        "address": "https:\/\/223.5.5.5\/dns-query",
-        "detour": "Direct"
-      },
+                "tag": "dns_direct",
+                "address": "114.114.114.114",
+                "strategy": "ipv4_only",
+                "detour": "Direct"
+            },
       {
         "tag": "block",
-        "address": "rcode://success"
+        "address": "rcode://refused"
       }
     ],
     "rules": [
@@ -222,13 +220,13 @@
       "tag": "Emby",
       "outbounds": [
         "Direct",
-        "{ACA}"
+        "{all}"
       ],
       "filter": [
         {
-          "action": "exclude",
+          "action": "include",
           "keywords": [
-            "剩余|距离|到期|HA"
+            "0.20"
           ]
         }
       ]
@@ -237,9 +235,7 @@
       "type": "selector",
       "tag": "👉 Select",
       "outbounds": [
-        "{MESL}",
-        "{IFUN}",
-        "{TKV}"
+        "{all}"
       ]
     },
     {
@@ -256,9 +252,7 @@
       "type": "urltest",
       "url": "http://www.gstatic.com/generate_204",
       "outbounds": [
-        "{MESL}",
-        "{IFUN}",
-        "{TKV}"
+        "{all}"
       ],
       "filter": [
         {
@@ -274,9 +268,7 @@
       "tag": "🇨🇳 TW",
       "url": "http://www.gstatic.com/generate_204",
       "outbounds": [
-        "{MESL}",
-        "{IFUN}",
-        "{TKV}"
+        "{all}"
       ],
       "filter": [
         {
@@ -292,9 +284,7 @@
       "tag": "🇯🇵 JP",
       "url": "http://www.gstatic.com/generate_204",
       "outbounds": [
-        "{MESL}",
-        "{IFUN}",
-        "{TKV}"
+        "{all}"
       ],
       "filter": [
         {
@@ -309,8 +299,7 @@
       "type": "urltest",
       "tag": "🇸🇬 SG",
       "outbounds": [
-        "{MESL}",
-        "{IFUN}"
+        "{all}"
       ],
       "filter": [
         {
@@ -326,9 +315,7 @@
       "tag": "🇺🇸 US",
       "url": "http://www.gstatic.com/generate_204",
       "outbounds": [
-        "{MESL}",
-        "{IFUN}",
-        "{TKV}"
+        "{all}"
       ],
       "filter": [
         {
@@ -466,72 +453,84 @@
                 "type": "remote",
                 "tag": "geosite-twitter",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Twitter/Twitter.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-geolocation-cn",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/China/China.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-geolocation-!cn",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Global/Global.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-google",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Google/Google.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-github",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/GitHub/GitHub.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-youtube",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/YouTube/YouTube.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-openai",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/OpenAI/OpenAI.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-telegram",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Telegram/Telegram.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-netflix",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Netflix/Netflix.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-tencent",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Tencent/Tencent.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-bilibili",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/BiliBili/BiliBili.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-dnsblock",
                 "format": "binary",
+								"download_detour": "👉 Select",
                 "url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/raw/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox.srs"
             }
         ],
