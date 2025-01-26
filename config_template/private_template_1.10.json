@@ -531,7 +531,7 @@
                 "tag": "geosite-dnsblock",
                 "format": "binary",
 								"download_detour": "👉 Select",
-                "url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/raw/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox.srs"
+                "url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/raw/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.srs"
             }
         ],
     "final": "✈️ Proxy",
