@@ -58,7 +58,7 @@
             "AAAA"
           ],
           "rule_set": "geosite-cn",
-          "server": "local"
+          "server": "fakeip"
         },
         {
           "rule_set": "geosite-cn",
@@ -84,7 +84,7 @@
             "A",
             "AAAA"
           ],
-          "server": "google"
+          "server": "fakeip"
         }
       ],
       "independent_cache": true,
