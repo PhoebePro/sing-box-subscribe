@@ -224,20 +224,11 @@
             "type": "tun",
             "tag": "tun-in",
             "mtu": 1492,
+						"domain_strategy": "prefer_ipv4",
             "interface_name": "tun.sing-box",
             "address": [
                 "172.19.0.1/30",
-    						"fdfe:dcba:9876::1/126"
-            ],
-            "route_address": [
-                "0.0.0.0/1",
-                "128.0.0.0/1",
-								"::/1",
-    						"8000::/1"
-            ],
-            "route_exclude_address": [
-                "192.168.0.0/16",
-								"fc00::/7"
+    						"2001:0470:f9da:fdfa::1/64"
             ],
             "auto_route": true,
             "strict_route": true,
