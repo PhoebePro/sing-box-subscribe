@@ -129,7 +129,7 @@
           "inet6_range": "fc00::/18"
         },
         "independent_cache": true,
-				"strategy": "ipv4_only",
+				"strategy": "prefer_ipv4",
         "final": "dns_proxy"
     },
     "inbounds": [
