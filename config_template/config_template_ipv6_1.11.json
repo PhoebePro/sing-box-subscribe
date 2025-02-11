@@ -100,11 +100,11 @@
           		"mode": "and",
           		"rules": [
             		{
-              		"rule_set": "geosite-geolocation-!cn",
-              		"invert": true
+              		"rule_set": "geosite-geolocation-!cn"
             		},
             		{
-              		"rule_set": "geoip-cn"
+              		"rule_set": "geoip-cn",
+              		"invert": true
             		}
           		],
           	"server": "dns_proxy",
@@ -197,8 +197,8 @@
             "type": "selector",
             "tag": "Emby",
             "outbounds": [
-                "Direct",
-                "{all}"
+                "{all}",
+								"Direct"
             ],
             "filter": [
                 {
