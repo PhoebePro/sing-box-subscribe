@@ -59,7 +59,7 @@
       			},
 						{
                 "domain": [
-                    "cf.lilyemby.my",
+                    "c.lilyemby.my",
 										"july.vfing.de"
                 ],
                 "domain_suffix": [
@@ -94,7 +94,7 @@
                     "emby-micax-ca-v2.mius.uk",
                     "emby.cn2gias.uk",
                     "emby.bangumi.ca",
-                    "cfemby.lilyya.xyz"
+                    "cf.lilyemby.my"
                 ],
 							"domain_suffix": [
                     "vercel.app",
@@ -505,7 +505,7 @@
                     },
                     {
                         "domain": [
-                            "cemby.lilyya.xyz",
+                            "c.lilyemby.my",
 														"july.vfing.de"
                         ]
                     },
