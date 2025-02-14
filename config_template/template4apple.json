@@ -38,7 +38,8 @@
             		"AAAA"
           		],
           		"action": "route",
-          		"server": "fakeip"
+          		"server": "fakeip",
+							"rewrite_ttl": 1
       			},
             {
                 "outbound": "any",
@@ -136,14 +137,8 @@
         {
             "type": "mixed",
 						"tag": "mixed-in",
-            "listen": "::",
-            "listen_port": 7890,
-            "users": [
-              {
-                "username": "local",
-                "password": "local"
-              }
-            ]
+            "listen": "127.0.0.1",
+            "listen_port": 7890
         },
         {
             "type": "tun",
@@ -154,17 +149,17 @@
                 "172.19.0.1/30",
 								"fdfe:dcba:9876::1/126"
             ],
-            "route_address": [
-                "0.0.0.0/1",
-                "128.0.0.0/1"
-            ],
-            "route_exclude_address": [
-                "192.168.0.0/16"
-            ],
             "auto_route": true,
             "strict_route": true,
-            "stack": "system"
-        }
+            "stack": "system",
+						"platform": {
+        			"http_proxy": {
+          		"enabled": true,
+          		"server": "127.0.0.1",
+          		"server_port": 7890
+        			}
+      			}
+        	}
     ],
     "outbounds": [
         {
