@@ -18,7 +18,7 @@
         "servers": [
             {
                 "tag": "dns_proxy",
-                "address": "https://1.1.1.1/dns-query",
+                "address": "https://8.8.8.8/dns-query",
 		    				"detour": "👉 Select"
             },
             {
@@ -38,18 +38,23 @@
             		"AAAA"
           		],
           		"action": "route",
-          		"server": "fakeip"
+          		"server": "fakeip",
+							"rewrite_ttl": 1
       			},
             {
                 "outbound": "any",
-                "server": "dns_direct"
+								"action": "route",
+                "server": "dns_direct",
+								"disable_cache": true
             },
             {
                 "clash_mode": "direct",
+								"action": "route",
                 "server": "dns_direct"
             },
             {
                 "clash_mode": "global",
+								"action": "route",
                 "server": "dns_proxy"
             },
 						{
@@ -136,14 +141,8 @@
         {
             "type": "mixed",
 						"tag": "mixed-in",
-            "listen": "::",
-            "listen_port": 7890,
-            "users": [
-              {
-                "username": "local",
-                "password": "local"
-              }
-            ]
+            "listen": "127.0.0.1",
+            "listen_port": 7890
         },
         {
             "type": "tun",
@@ -154,13 +153,13 @@
                 "172.19.0.1/30",
 								"fdfe:dcba:9876::1/126"
             ],
-            "route_address": [
-                "0.0.0.0/1",
-                "128.0.0.0/1"
-            ],
-            "route_exclude_address": [
-                "192.168.0.0/16"
-            ],
+						"platform": {
+        			"http_proxy": {
+          			"enabled": true,
+          			"server": "127.0.0.1",
+          			"server_port": 7890
+        			}
+      			},
             "auto_route": true,
             "strict_route": true,
             "stack": "system"
