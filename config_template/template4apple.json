@@ -19,7 +19,7 @@
             {
                 "tag": "dns_proxy",
                 "address": "https://1.1.1.1/dns-query",
-		    				"detour": "👉 Select"
+		    				"detour": "✈️ Proxy"
             },
             {
                 "tag": "dns_direct",
@@ -38,8 +38,7 @@
             		"AAAA"
           		],
           		"action": "route",
-          		"server": "fakeip",
-							"rewrite_ttl": 1
+          		"server": "fakeip"
       			},
             {
                 "outbound": "any",
@@ -151,14 +150,7 @@
             ],
             "auto_route": true,
             "strict_route": true,
-            "stack": "system",
-						"platform": {
-        			"http_proxy": {
-          		"enabled": true,
-          		"server": "127.0.0.1",
-          		"server_port": 7890
-        			}
-      			}
+            "stack": "system"
         	}
     ],
     "outbounds": [
