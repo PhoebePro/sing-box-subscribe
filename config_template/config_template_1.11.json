@@ -19,7 +19,7 @@
             {
                 "tag": "dns_proxy",
                 "address": "https://8.8.8.8/dns-query",
-		    				"detour": "👉 Select"
+		    				"detour": "✈️ Proxy"
             },
             {
                 "tag": "dns_direct",
@@ -37,24 +37,19 @@
             		"A",
             		"AAAA"
           		],
-          		"action": "route",
-          		"server": "fakeip",
-							"rewrite_ttl": 1
+          		"server": "fakeip"
       			},
             {
                 "outbound": "any",
-								"action": "route",
                 "server": "dns_direct",
 								"disable_cache": true
             },
             {
                 "clash_mode": "direct",
-								"action": "route",
                 "server": "dns_direct"
             },
             {
                 "clash_mode": "global",
-								"action": "route",
                 "server": "dns_proxy"
             },
 						{
@@ -153,13 +148,6 @@
                 "172.19.0.1/30",
 								"fdfe:dcba:9876::1/126"
             ],
-						"platform": {
-        			"http_proxy": {
-          			"enabled": true,
-          			"server": "127.0.0.1",
-          			"server_port": 7890
-        			}
-      			},
             "auto_route": true,
             "strict_route": true,
             "stack": "system"
