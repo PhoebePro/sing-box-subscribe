@@ -32,14 +32,6 @@
             }
         ],
         "rules": [
-						{
-          		"query_type": [
-            		"A",
-            		"AAAA"
-          		],
-          		"action": "route",
-          		"server": "fakeip"
-      			},
             {
                 "outbound": "any",
                 "server": "dns_direct"
@@ -121,7 +113,14 @@
           		],
           	"server": "dns_proxy",
           	"client_subnet": "114.114.114.114/24"
-        	}
+        	},
+					{
+          		"query_type": [
+            		"A",
+            		"AAAA"
+          		],
+          		"server": "fakeip"
+      		}
         ],
 				"fakeip": {
           "enabled": true,
