@@ -18,7 +18,7 @@
             {
                 "tag": "dns_proxy",
                 "address": "https://8.8.8.8/dns-query",
-		    				"detour": "✈️ Proxy"
+                "detour": "✈️ Proxy"
             },
             {
                 "tag": "dns_direct",
@@ -30,7 +30,7 @@
             {
                 "outbound": "any",
                 "server": "dns_direct",
-								"disable_cache": true
+                "disable_cache": true
             },
             {
                 "clash_mode": "direct",
@@ -40,10 +40,10 @@
                 "clash_mode": "global",
                 "server": "dns_proxy"
             },
-						{
+            {
                 "domain": [
                     "c.lilyemby.my",
-										"july.vfing.de"
+                    "july.vfing.de"
                 ],
                 "domain_suffix": [
                     "icloudnative.io",
@@ -72,37 +72,37 @@
                 "ip_is_private": true,
                 "server": "dns_direct"
             },
-						{
-							"domain": [
+            {
+                "domain": [
                     "emby-micax-ca-v2.mius.uk",
                     "emby.cn2gias.uk",
                     "emby.bangumi.ca",
                     "cf.lilyemby.my"
                 ],
-							"domain_suffix": [
+                "domain_suffix": [
                     "vercel.app",
                     "ping0.cc",
                     "cardinalcommerce.com"
                 ],
-								"server": "dns_proxy"
-						},
-						{
-							"rule_set": "geosite-geolocation-cn",
-							"server": "dns_direct"
-						},
-						{		
-            	"rule_set": "geosite-geolocation-!cn",
-          		"server": "dns_proxy"
-        		}
+                "server": "dns_proxy"
+            },
+            {
+                "rule_set": "geosite-geolocation-cn",
+                "server": "dns_direct"
+            },
+            {
+                "rule_set": "geosite-geolocation-!cn",
+                "server": "dns_proxy"
+            }
         ],
         "independent_cache": true,
-				"strategy": "ipv4_only",
+        "strategy": "ipv4_only",
         "final": "dns_proxy"
     },
     "inbounds": [
         {
             "type": "mixed",
-						"tag": "mixed-in",
+            "tag": "mixed-in",
             "listen": "127.0.0.1",
             "listen_port": 7890
         },
@@ -169,7 +169,7 @@
             "tag": "Emby",
             "outbounds": [
                 "{all}",
-								"Direct"
+                "Direct"
             ],
             "filter": [
                 {
@@ -196,7 +196,7 @@
                 "🇺🇸 US"
             ]
         },
-				{
+        {
             "tag": "Apple",
             "type": "selector",
             "outbounds": [
@@ -332,25 +332,25 @@
     "route": {
         "rules": [
             {
-          		"inbound": [
-								"tun-in", 
-								"mixed-in"
-							],
-          		"action": "sniff"
-        		},
-        		{
-          		"type": "logical",
-          		"mode": "or",
-          		"rules":[
-            		{
-              		"port":53
-            		},
-            	{
-              	"protocol": "dns"
-            	}
-          		],
-          		"action": "hijack-dns"
-        		},
+                "inbound": [
+                    "tun-in",
+                    "mixed-in"
+                ],
+                "action": "sniff"
+            },
+            {
+                "type": "logical",
+                "mode": "or",
+                "rules": [
+                    {
+                        "port": 53
+                    },
+                    {
+                        "protocol": "dns"
+                    }
+                ],
+                "action": "hijack-dns"
+            },
             {
                 "clash_mode": "direct",
                 "outbound": "Direct"
@@ -370,10 +370,10 @@
                 ],
                 "outbound": "Telegram"
             },
-						{
-							"rule_set": "geosite-apple",
-							"outbound": "Apple"
-						},
+            {
+                "rule_set": "geosite-apple",
+                "outbound": "Apple"
+            },
             {
                 "domain": [
                     "emby-micax-ca-v2.mius.uk",
@@ -459,7 +459,7 @@
                     {
                         "domain": [
                             "c.lilyemby.my",
-														"july.vfing.de"
+                            "july.vfing.de"
                         ]
                     },
                     {
@@ -550,7 +550,7 @@
                 "download_detour": "👉 Select",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-tencent.srs"
             },
-						{
+            {
                 "type": "remote",
                 "tag": "geosite-apple",
                 "format": "binary",
