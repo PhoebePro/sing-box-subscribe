@@ -97,23 +97,17 @@
 							],
 							"server": "dns_direct"
 						},
+						{		
+            	"rule_set": "geosite-geolocation-!cn",
+          		"server": "dns_proxy"
+        		},
 						{
-          		"type": "logical",
-          		"mode": "and",
-          		"rules": [
-            		{
-              		"rule_set": "geosite-geolocation-!cn"
-            		}
-          		],
-          	"server": "dns_proxy"
-        	},
-					{
           		"query_type": [
             		"A",
             		"AAAA"
           		],
           		"server": "fakeip"
-      		}
+      			}
         ],
 				"fakeip": {
           "enabled": true,
