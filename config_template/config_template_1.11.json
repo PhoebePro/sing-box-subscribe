@@ -92,31 +92,23 @@
 								"server": "dns_proxy"
 						},
 						{
-							"rule_set": "geosite-geolocation-cn",
+							"rule_set": [
+								"geosite-geolocation-cn",
+								"geoip-cn"
+							],
 							"server": "dns_direct"
 						},
+						{		
+            	"rule_set": "geosite-geolocation-!cn",
+          		"server": "dns_proxy"
+        		},
 						{
-          		"type": "logical",
-          		"mode": "and",
-          		"rules": [
-            		{
-              		"rule_set": "geosite-geolocation-!cn"
-            		},
-            		{
-              		"rule_set": "geoip-cn",
-              		"invert": true
-            		}
-          		],
-          	"server": "dns_proxy",
-          	"client_subnet": "114.114.114.114/24"
-        	},
-					{
           		"query_type": [
             		"A",
             		"AAAA"
           		],
           		"server": "fakeip"
-      		}
+      			}
         ],
 				"fakeip": {
           "enabled": true,
