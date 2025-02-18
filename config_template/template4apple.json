@@ -11,7 +11,7 @@
         },
         "cache_file": {
             "enabled": true,
-            "store_rdrc": true
+            "store_fakeip": true
         }
     },
     "dns": {
