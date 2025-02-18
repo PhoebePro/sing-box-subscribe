@@ -96,7 +96,6 @@
         		}
         ],
         "independent_cache": true,
-				"strategy": "ipv4_only",
         "final": "dns_proxy"
     },
     "inbounds": [
@@ -112,7 +111,8 @@
             "mtu": 1492,
             "interface_name": "tun.sing-box",
             "address": [
-                "172.19.0.1/30"
+                "172.19.0.1/30",
+								"fdfe:dcba:9876::0/126"
             ],
             "auto_route": true,
             "strict_route": true,
