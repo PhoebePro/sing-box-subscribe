@@ -45,6 +45,13 @@
                 "server": "dns_proxy"
             },
 						{
+          		"query_type": [
+            		"A",
+            		"AAAA"
+          		],
+          		"server": "fakeip"
+      			},
+						{
                 "domain": [
                     "c.lilyemby.my",
 										"july.vfing.de"
@@ -91,23 +98,13 @@
 								"server": "dns_proxy"
 						},
 						{
-							"rule_set": [
-								"geosite-geolocation-cn",
-								"geoip-cn"
-							],
+							"rule_set": "geosite-geolocation-cn",
 							"server": "dns_direct"
 						},
 						{		
             	"rule_set": "geosite-geolocation-!cn",
           		"server": "dns_proxy"
-        		},
-						{
-          		"query_type": [
-            		"A",
-            		"AAAA"
-          		],
-          		"server": "fakeip"
-      			}
+        		}
         ],
 				"fakeip": {
           "enabled": true,
