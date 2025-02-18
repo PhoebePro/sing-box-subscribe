@@ -10,8 +10,7 @@
             "default_mode": "rule"
         },
         "cache_file": {
-            "enabled": true,
-            "store_fakeip": true
+            "enabled": true
         }
     },
     "dns": {
@@ -25,10 +24,6 @@
                 "tag": "dns_direct",
                 "address": "https://223.5.5.5/dns-query",
                 "detour": "Direct"
-            },
-						{
-              "tag": "fakeip",
-              "address": "fakeip"
             }
         ],
         "rules": [
@@ -44,13 +39,6 @@
                 "clash_mode": "global",
                 "server": "dns_proxy"
             },
-						{
-          		"query_type": [
-            		"A",
-            		"AAAA"
-          		],
-          		"server": "fakeip"
-      			},
 						{
                 "domain": [
                     "c.lilyemby.my",
@@ -106,12 +94,8 @@
           		"server": "dns_proxy"
         		}
         ],
-				"fakeip": {
-          "enabled": true,
-          "inet4_range": "198.18.0.0/15",
-          "inet6_range": "fc00::/18"
-        },
         "independent_cache": true,
+				"strategy": "ipv4_only",
         "final": "dns_proxy"
     },
     "inbounds": [
@@ -127,8 +111,7 @@
             "mtu": 1492,
             "interface_name": "tun.sing-box",
             "address": [
-                "172.19.0.1/30",
-								"fdfe:dcba:9876::1/126"
+                "172.19.0.1/30"
             ],
             "auto_route": true,
             "strict_route": true,
