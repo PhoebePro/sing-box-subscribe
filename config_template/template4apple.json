@@ -40,10 +40,6 @@
                 "server": "dns_proxy"
             },
             {
-              "rule_set": "geosite-dnsblock",
-              "action": "reject"
-            },
-            {
                 "domain": [
                     "c.lilyemby.my",
                     "july.vfing.de"
@@ -636,13 +632,6 @@
                 "format": "binary",
                 "download_detour": "👉 Select",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-bl.srs"
-            },
-            {
-              "type": "remote",
-              "tag": "geosite-dnsblock",
-              "format": "binary",
-              "download_detour": "👉 Select",
-              "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
             }
         ],
         "final": "✈️ Proxy",
