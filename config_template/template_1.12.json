@@ -105,7 +105,7 @@
         "🇭🇰 HK",
         "🇸🇬 SG"
       ],
-      "default": "🇺🇸 US"
+      "default": "🇭🇰 HK"
     },
     {
       "type": "selector",
@@ -175,6 +175,7 @@
       "type": "selector",
       "outbounds": [
         "Direct",
+        "👉 Select",
         "🇺🇸 US"
       ]
     },
