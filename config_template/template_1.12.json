@@ -349,7 +349,7 @@
             "tag": "Direct"
         }
     ],
-    "route": 
+    "route": {
 				"default_domain_resolver": {
       		"server": "dns_direct"
     		},
