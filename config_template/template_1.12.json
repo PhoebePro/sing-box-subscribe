@@ -100,7 +100,10 @@
         "server": "dns_proxy"
       },
       {
-        "rule_set": "geosite-geolocation-cn",
+        "rule_set": [
+          "geosite-geolocation-cn",
+          "geoip-cn"
+        ],
         "server": "dns_direct"
       },
       {
