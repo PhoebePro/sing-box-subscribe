@@ -59,15 +59,14 @@
       }
     ],
     "independent_cache": true,
-    "strategy": "prefer_ipv4",
+    "strategy": "ipv4_only",
     "final": "dns_proxy"
   },
   "inbounds": [
     {
       "type": "tun",
       "address": [
-        "172.19.0.0/30",
-        "fdfe:dcba:9876::0/126"
+        "172.19.0.0/30"
       ],
       "stack": "system",
       "auto_route": true
