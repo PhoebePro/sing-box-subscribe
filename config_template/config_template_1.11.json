@@ -41,62 +41,26 @@
                 "server": "dns_proxy"
             },
             {
-                "domain": [
-                    "c.lilyemby.my",
-                    "july.vfing.de"
-                ],
-                "domain_suffix": [
-                    "icloudnative.io",
-                    "fuckcloudnative.io",
-                    "sealos.io",
-                    "cdn.jsdelivr.net",
-                    "emby.wtf",
-                    "term.wtf",
-                    "makima.online",
-                    "zxxk.com",
-                    "xkw.com",
-                    "ibllc.com",
-                    "ibkr.com",
-                    "cncbinternational.com",
-                    "hongkongpost.hk",
-                    "chinatelecom.com.hk",
-                    "ctcmo.com",
-                    "1888.com",
-                    "hsbc.com.hk",
-                    "boccc.com.hk",
-                    "bochk.com",
-                    "interactivebrokers.com",
-                    "epicgames.com",
-                    "loungekey.com"
-                ],
-                "ip_is_private": true,
-                "server": "dns_direct"
-            },
-            {
-                "domain": [
-                    "emby-micax-ca-v2.mius.uk",
-                    "emby.cn2gias.uk",
-                    "emby.bangumi.ca",
-                    "cf.lilyemby.my"
-                ],
-                "domain_suffix": [
-                    "vercel.app",
-                    "ping0.cc",
-                    "cardinalcommerce.com"
-                ],
-                "server": "dns_proxy"
-            },
-            {
-                "rule_set": "geosite-geolocation-cn",
-                "server": "dns_direct"
-            },
-            {
-                "rule_set": "geosite-geolocation-!cn",
-                "server": "dns_proxy"
-            }
+        			"rule_set": "geosite-geolocation-cn",
+        			"server": "dns_direct"
+      			},
+      			{
+        			"type": "logical",
+        			"mode": "and",
+        			"rules": [
+          			{
+            			"rule_set": "geosite-geolocation-!cn",
+            			"invert": true
+          			},
+          			{
+            			"rule_set": "geoip-cn"
+          			}
+        			],
+        			"server": "dns_proxy",
+        			"client_subnet": "114.114.114.114/24"
+      			}
         ],
         "independent_cache": true,
-        "strategy": "ipv4_only",
         "final": "dns_proxy"
     },
     "inbounds": [
@@ -112,8 +76,9 @@
             "mtu": 1492,
             "interface_name": "tun.sing-box",
             "address": [
-                "172.19.0.1/30"
-            ],
+        			"172.19.0.0/30",
+        			"fdfe:dcba:9876::0/126"
+      			],
             "auto_route": true,
             "strict_route": true,
             "stack": "system"
