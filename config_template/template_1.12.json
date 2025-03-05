@@ -27,12 +27,6 @@
         "type": "https",
         "server": "223.5.5.5",
         "detour": "Direct"
-      },
-      {
-        "tag": "fakeip",
-        "type": "fakeip",
-        "inet4_range": "198.18.0.0/15",
-        "inet6_range": "fc00::/18"
       }
     ],
     "rules": [
@@ -45,74 +39,26 @@
         "server": "dns_proxy"
       },
       {
-        "domain": [
-          "c.lilyemby.my",
-          "july.vfing.de"
-        ],
-        "domain_suffix": [
-          "icloudnative.io",
-          "fuckcloudnative.io",
-          "sealos.io",
-          "cdn.jsdelivr.net",
-          "emby.wtf",
-          "term.wtf",
-          "makima.online",
-          "zxxk.com",
-          "xkw.com",
-          "ibllc.com",
-          "ibkr.com",
-          "cncbinternational.com",
-          "hongkongpost.hk",
-          "chinatelecom.com.hk",
-          "ctcmo.com",
-          "1888.com",
-          "hsbc.com.hk",
-          "boccc.com.hk",
-          "bochk.com",
-          "interactivebrokers.com",
-          "epicgames.com",
-          "loungekey.com"
-        ],
-        "ip_is_private": true,
+        "rule_set": "geosite-geolocation-cn",
         "server": "dns_direct"
       },
       {
-        "domain": [
-          "emby-micax-ca-v2.mius.uk",
-          "emby.cn2gias.uk",
-          "emby.bangumi.ca",
-          "cf.lilyemby.my"
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "geosite-geolocation-!cn",
+            "invert": true
+          },
+          {
+            "rule_set": "geoip-cn"
+          }
         ],
-        "domain_suffix": [
-          "vercel.app",
-          "ping0.cc",
-          "cardinalcommerce.com"
-        ],
-        "server": "dns_proxy"
-      },
-      {
-        "rule_set": [
-          "geosite-geolocation-cn",
-          "geoip-cn"
-        ],
-        "server": "dns_direct"
-      },
-      {
-        "rule_set": "geosite-geolocation-!cn",
-        "server": "dns_proxy"
-      },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "action": "route",
-        "server": "fakeip",
-        "rewrite_ttl": 1
+        "server": "dns_proxy",
+        "client_subnet": "114.114.114.114/24"
       }
     ],
     "independent_cache": true,
-    "strategy": "prefer_ipv4",
     "final": "dns_proxy"
   },
   "inbounds": [
