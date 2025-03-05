@@ -62,13 +62,11 @@
   "inbounds": [
     {
       "type": "mixed",
-      "tag": "mixed-in",
       "listen": "127.0.0.1",
       "listen_port": 7890
     },
     {
       "type": "tun",
-      "tag": "tun-in",
       "mtu": 1492,
       "interface_name": "tun.sing-box",
       "address": [
@@ -292,11 +290,14 @@
   "route": {
     "rules": [
       {
-        "inbound": [
-          "tun-in",
-          "mixed-in"
+        "action": "sniff",
+        "sniffer": [
+          "http",
+          "tls",
+          "quic",
+          "dns"
         ],
-        "action": "sniff"
+        "timeout": "500ms"
       },
       {
         "type": "logical",
