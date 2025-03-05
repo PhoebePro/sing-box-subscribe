@@ -27,12 +27,6 @@
         "type": "https",
         "server": "223.5.5.5",
         "detour": "Direct"
-      },
-      {
-        "tag": "fakeip",
-        "type": "fakeip",
-        "inet4_range": "198.18.0.0/15",
-        "inet6_range": "fc00::/18"
       }
     ],
     "rules": [
@@ -47,15 +41,6 @@
       {
         "rule_set": "geosite-geolocation-cn",
         "server": "dns_direct"
-      },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "action": "route",
-        "server": "fakeip",
-        "rewrite_ttl": 1
       },
       {
         "type": "logical",
