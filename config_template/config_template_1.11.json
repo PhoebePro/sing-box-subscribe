@@ -333,6 +333,9 @@
         "action": "hijack-dns"
       },
       {
+        "action": "resolve"
+      },
+      {
         "clash_mode": "direct",
         "action": "route",
         "outbound": "Direct"
