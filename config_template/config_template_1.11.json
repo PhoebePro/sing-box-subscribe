@@ -63,8 +63,7 @@
       },
       {
         "rule_set": [
-          "geosite-geolocation-cn",
-          "geoip-cn"
+          "geosite-geolocation-cn"
         ],
         "action": "route",
         "server": "dns_direct"
