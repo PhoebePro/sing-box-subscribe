@@ -77,6 +77,13 @@
       "address": [
         "172.19.0.0/30"
       ],
+      "route_address": [
+        "0.0.0.0/1",
+        "128.0.0.0/1"
+      ],
+      "route_exclude_address": [
+        "192.168.0.0/16"
+      ],
       "auto_route": true,
       "strict_route": true,
       "stack": "system"
