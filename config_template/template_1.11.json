@@ -83,6 +83,11 @@
         "outbound": "direct"
       },
       {
+        "domain_suffix": "vercel.app",
+        "action": "route",
+        "outbound": "proxy"
+      },
+      {
         "domain": [
           "emby-micax-ca-v2.mius.uk",
           "emby.cn2gias.uk",
