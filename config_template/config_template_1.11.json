@@ -321,15 +321,6 @@
       "default": "🇸🇬 SG"
     },
     {
-      "tag": "bilibili",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "👉 Select"
-      ],
-      "default": "direct"
-    },
-    {
       "tag": "youtube",
       "type": "selector",
       "outbounds": [
