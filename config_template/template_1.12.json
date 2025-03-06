@@ -24,6 +24,10 @@
         "server": "dns_proxy"
       },
       {
+        "rule_set": "geosite-dnsblock",
+        "action": "reject"
+      },
+      {
         "rule_set": "cn_domain",
         "action": "route",
         "server": "dns_direct"
@@ -231,6 +235,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/youtube.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-dnsblock",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs",
         "download_detour": "🇸🇬 SG"
       }
     ],
