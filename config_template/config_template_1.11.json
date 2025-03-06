@@ -29,19 +29,23 @@
     "rules": [
       {
         "outbound": "any",
+        "action": "route",
         "server": "dns_direct",
         "disable_cache": true
       },
       {
         "clash_mode": "direct",
+        "action": "route",
         "server": "dns_direct"
       },
       {
         "clash_mode": "global",
+        "action": "route",
         "server": "dns_proxy"
       },
       {
         "rule_set": "geosite-geolocation-cn",
+        "action": "route",
         "server": "dns_direct"
       },
       {
@@ -56,12 +60,12 @@
             "rule_set": "geoip-cn"
           }
         ],
+        "action": "route",
         "server": "dns_proxy",
         "client_subnet": "114.114.114.114/24"
       }
     ],
     "independent_cache": true,
-    "strategy": "ipv4_only",
     "final": "dns_proxy"
   },
   "inbounds": [
@@ -73,9 +77,9 @@
     {
       "type": "tun",
       "mtu": 1492,
-      "interface_name": "tun.sing-box",
       "address": [
-        "172.19.0.0/30"
+        "172.19.0.0/30",
+        "fdfe:dcba:9876::0/126"
       ],
       "route_address": [
         "0.0.0.0/1",
@@ -326,10 +330,12 @@
       },
       {
         "clash_mode": "direct",
+        "action": "route",
         "outbound": "Direct"
       },
       {
         "clash_mode": "global",
+        "action": "route",
         "outbound": "✈️ Proxy"
       },
       {
@@ -341,10 +347,12 @@
           "geosite-telegram",
           "geoip-tg"
         ],
+        "action": "route",
         "outbound": "Telegram"
       },
       {
         "rule_set": "geosite-apple",
+        "action": "route",
         "outbound": "Apple"
       },
       {
@@ -358,6 +366,7 @@
           "misakaf.org",
           "nanflix.net"
         ],
+        "action": "route",
         "outbound": "Emby"
       },
       {
@@ -365,6 +374,7 @@
           "geosite-openai",
           "geoip-ai"
         ],
+        "action": "route",
         "outbound": "openai"
       },
       {
@@ -372,6 +382,7 @@
           "geosite-youtube",
           "geoip-yt"
         ],
+        "action": "route",
         "outbound": "youtube"
       },
       {
@@ -398,6 +409,7 @@
             ]
           }
         ],
+        "action": "route",
         "outbound": "✈️ Proxy"
       },
       {
@@ -449,6 +461,7 @@
             ]
           }
         ],
+        "action": "route",
         "outbound": "Direct"
       }
     ],
@@ -609,7 +622,6 @@
       }
     ],
     "final": "✈️ Proxy",
-    "find_process": true,
     "auto_detect_interface": true
   }
 }
