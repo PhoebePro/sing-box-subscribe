@@ -82,7 +82,7 @@
         "outbound": "direct"
       },
       {
-        "domain-suffix": "vercel.app",
+        "domain_suffix": "vercel.app",
         "action": "route",
         "outbound": "proxy"
       },
