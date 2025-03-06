@@ -266,7 +266,7 @@
         "download_detour": "direct"
       }
     ],
-    "final": "final",
+    "final": "👉 Select",
     "auto_detect_interface": true
   },
   "outbounds": [
