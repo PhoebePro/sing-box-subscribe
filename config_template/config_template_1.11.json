@@ -71,7 +71,7 @@
       {
         "clash_mode": "Global",
         "action": "route",
-        "outbound": "GLOBAL"
+        "outbound": "proxy"
       },
       {
         "clash_mode": "Direct",
@@ -86,21 +86,8 @@
           "cf.lilyemby.my"
         ],
         "action": "route",
-        "outbound": "Emby"
-      },
-      {
-        "rule_set": "bilibili_domain",
-        "action": "route",
-        "outbound": "bilibili"
-      },
-      {
-        "rule_set": [
-          "netflix_ip",
-          "netflix_domain"
-        ],
-        "action": "route",
-        "outbound": "netflix"
-      },
+        "outbound": "emby"
+      },      
       {
         "rule_set": "youtube_domain",
         "action": "route",
@@ -169,7 +156,7 @@
           "cn_domain"
         ],
         "action": "route",
-        "outbound": "cn"
+        "outbound": "direct"
       }
     ],
     "rule_set": [
@@ -287,40 +274,25 @@
       "tag": "proxy",
       "type": "selector",
       "outbounds": [
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto",
-        "direct"
+        "👉 Select",
+        "🇺🇸 US",
+        "🇯🇵 JP",
+        "🇨🇳 TW",
+        "🇭🇰 HK",
+        "🇸🇬 SG"
       ],
-      "default": "all-auto"
+      "default": "🇭🇰 HK"
     },
     {
       "tag": "google",
       "type": "selector",
       "outbounds": [
         "proxy",
-        "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
+        "🇺🇸 US",
+        "🇯🇵 JP",
+        "🇨🇳 TW",
+        "🇭🇰 HK",
+        "🇸🇬 SG"
       ],
       "default": "proxy"
     },
@@ -330,18 +302,11 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
+        "🇺🇸 US",
+        "🇯🇵 JP",
+        "🇨🇳 TW",
+        "🇭🇰 HK",
+        "🇸🇬 SG"
       ],
       "default": "direct"
     },
@@ -350,82 +315,30 @@
       "type": "selector",
       "outbounds": [
         "proxy",
-        "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
+        "👉 Select",
+        "🇸🇬 SG"
       ],
-      "default": "proxy"
+      "default": "🇸🇬 SG"
     },
     {
       "tag": "bilibili",
       "type": "selector",
       "outbounds": [
         "proxy",
-        "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
+        "👉 Select"
       ],
       "default": "direct"
-    },
-    {
-      "tag": "netflix",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
-      ],
-      "default": "proxy"
     },
     {
       "tag": "youtube",
       "type": "selector",
       "outbounds": [
         "proxy",
-        "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
+        "🇺🇸 US",
+        "🇯🇵 JP",
+        "🇨🇳 TW",
+        "🇭🇰 HK",
+        "🇸🇬 SG"
       ],
       "default": "proxy"
     },
@@ -434,63 +347,13 @@
       "type": "selector",
       "outbounds": [
         "proxy",
-        "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
+        "🇺🇸 US",
+        "🇯🇵 JP",
+        "🇨🇳 TW",
+        "🇭🇰 HK",
+        "🇸🇬 SG"
       ],
-      "default": "proxy"
-    },
-    {
-      "tag": "cn",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
-      ],
-      "default": "direct"
-    },
-    {
-      "tag": "final",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
-      ],
-      "default": "proxy"
+      "default": "🇺🇸 US"
     },
     {
       "tag": "emby",
@@ -508,119 +371,14 @@
       ]
     },
     {
-      "tag": "hk",
-      "type": "selector",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "🇭🇰|HK|hk|香港|港|HongKong"
-          ]
-        },
-        {
-          "action": "exclude",
-          "keywords": [
-            "0.20"
-          ]
-        }
-      ]
-    },
-    {
-      "tag": "tw",
-      "type": "selector",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "🇨🇳|台湾|TW|TAIWAN|Taiwan"
-          ]
-        },
-        {
-          "action": "exclude",
-          "keywords": [
-            "0.20"
-          ]
-        }
-      ]
-    },
-    {
-      "tag": "jp",
-      "type": "selector",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "🇯🇵|日本|JP|JAPAN|Japan"
-          ]
-        },
-        {
-          "action": "exclude",
-          "keywords": [
-            "0.20"
-          ]
-        }
-      ]
-    },
-    {
-      "tag": "sg",
-      "type": "selector",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "🇸🇬|新加坡|SG|SINGAPORE|Singapore"
-          ]
-        },
-        {
-          "action": "exclude",
-          "keywords": [
-            "0.20"
-          ]
-        }
-      ]
-    },
-    {
-      "tag": "us",
-      "type": "selector",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "🇺🇸|美国|US|UNITED STATES|United States"
-          ]
-        },
-        {
-          "action": "exclude",
-          "keywords": [
-            "Austria|Russia|0.20"
-          ]
-        }
-      ]
-    },
-    {
-      "tag": "all",
+      "tag": "👉 Select",
       "type": "selector",
       "outbounds": [
         "{all}"
       ]
     },
     {
-      "tag": "hk-auto",
+      "tag": "🇭🇰 HK",
       "type": "urltest",
       "outbounds": [
         "{all}"
@@ -644,7 +402,7 @@
       "tolerance": 10
     },
     {
-      "tag": "tw-auto",
+      "tag": "🇨🇳 TW",
       "type": "urltest",
       "outbounds": [
         "{all}"
@@ -668,7 +426,7 @@
       "tolerance": 10
     },
     {
-      "tag": "jp-auto",
+      "tag": "🇯🇵 JP",
       "type": "urltest",
       "outbounds": [
         "{all}"
@@ -692,7 +450,7 @@
       "tolerance": 10
     },
     {
-      "tag": "sg-auto",
+      "tag": "🇸🇬 SG",
       "type": "urltest",
       "outbounds": [
         "{all}"
@@ -716,7 +474,7 @@
       "tolerance": 10
     },
     {
-      "tag": "us-auto",
+      "tag": "🇺🇸 US",
       "type": "urltest",
       "outbounds": [
         "{all}"
@@ -738,37 +496,6 @@
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
       "tolerance": 10
-    },
-    {
-      "tag": "all-auto",
-      "type": "urltest",
-      "outbounds": [
-        "{all}"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "GLOBAL",
-      "type": "selector",
-      "outbounds": [
-        "direct",
-        "proxy",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
-      ],
-      "default": "direct"
     },
     {
       "tag": "direct",
@@ -784,13 +511,7 @@
       ],
       "stack": "mixed",
       "auto_route": true,
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 7890
-        }
-      }
+      "strict_route": true
     },
     {
       "type": "mixed",
