@@ -39,15 +39,6 @@
         "server": "dns_proxy"
       },
       {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "action": "route",
-        "server": "fakeip",
-        "rewrite_ttl": 1
-      },
-      {
         "rule_set": "cn_domain",
         "action": "route",
         "server": "dns_direct"
