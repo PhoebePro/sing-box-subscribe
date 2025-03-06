@@ -336,6 +336,11 @@
         "action": "resolve"
       },
       {
+        "ip_is_private": true,
+        "action": "route",
+        "outbound": "Direct"
+      },
+      {
         "clash_mode": "direct",
         "action": "route",
         "outbound": "Direct"
@@ -369,10 +374,6 @@
           "emby.bangumi.ca",
           "cf.lilyemby.my"
         ],
-        "domain_suffix": [
-          "misakaf.org",
-          "nanflix.net"
-        ],
         "action": "route",
         "outbound": "Emby"
       },
@@ -393,80 +394,55 @@
         "outbound": "youtube"
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "domain_suffix": [
-              "vercel.app",
-              "ping0.cc"
-            ]
-          },
-          {
-            "rule_set": [
-              "geosite-twitter",
-              "geosite-google",
-              "geosite-github",
-              "geosite-netflix",
-              "geosite-geolocation-!cn",
-              "geoip-tt",
-              "geoip-gg",
-              "geoip-gh",
-              "geoip-nf"
-            ]
-          }
+        "domain_suffix": [
+          "vercel.app",
+          "ping0.cc"
+        ],
+        "rule_set": [
+          "geosite-twitter",
+          "geosite-google",
+          "geosite-github",
+          "geosite-netflix",
+          "geosite-geolocation-!cn",
+          "geoip-tt",
+          "geoip-gg",
+          "geoip-gh",
+          "geoip-nf"
         ],
         "action": "route",
         "outbound": "✈️ Proxy"
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "domain_suffix": [
-              "icloudnative.io",
-              "fuckcloudnative.io",
-              "sealos.io",
-              "cdn.jsdelivr.net",
-              "emby.wtf",
-              "term.wtf",
-              "zxxk.com",
-              "xkw.com",
-              "ibllc.com",
-              "ibkr.com",
-              "cncbinternational.com",
-              "hongkongpost.hk",
-              "chinatelecom.com.hk",
-              "ctcmo.com",
-              "1888.com",
-              "hsbc.com.hk",
-              "boccc.com.hk",
-              "bochk.com",
-              "interactivebrokers.com",
-              "epicgames.com",
-              "loungekey.com"
-            ]
-          },
-          {
-            "domain": [
-              "c.lilyemby.my",
-              "july.vfing.de"
-            ]
-          },
-          {
-            "ip_is_private": true
-          },
-          {
-            "rule_set": [
-              "geosite-tencent",
-              "geosite-bilibili",
-              "geosite-geolocation-cn",
-              "geoip-tc",
-              "geoip-bl",
-              "geoip-cn"
-            ]
-          }
+        "domain_suffix": [
+          "icloudnative.io",
+          "fuckcloudnative.io",
+          "sealos.io",
+          "cdn.jsdelivr.net",
+          "emby.wtf",
+          "term.wtf",
+          "zxxk.com",
+          "xkw.com",
+          "ibllc.com",
+          "ibkr.com",
+          "cncbinternational.com",
+          "hongkongpost.hk",
+          "chinatelecom.com.hk",
+          "ctcmo.com",
+          "1888.com",
+          "hsbc.com.hk",
+          "boccc.com.hk",
+          "bochk.com",
+          "interactivebrokers.com",
+          "epicgames.com",
+          "loungekey.com"
+        ],
+        "rule_set": [
+          "geosite-tencent",
+          "geosite-bilibili",
+          "geosite-geolocation-cn",
+          "geoip-tc",
+          "geoip-bl",
+          "geoip-cn"
         ],
         "action": "route",
         "outbound": "Direct"
