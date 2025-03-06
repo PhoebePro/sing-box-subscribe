@@ -100,7 +100,7 @@
           "cf.lilyemby.my"
         ],
         "action": "route",
-        "outbound": "Emby"
+        "outbound": "emby"
       },
       {
         "rule_set": "bilibili_domain",
@@ -505,6 +505,21 @@
         "all-auto"
       ],
       "default": "proxy"
+    },
+    {
+      "tag": "emby",
+      "type": "selector",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "US|JP|us|jp|United States|Japan"
+          ]
+        }
+      ]
     },
     {
       "tag": "hk",
