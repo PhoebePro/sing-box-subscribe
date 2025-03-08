@@ -83,6 +83,10 @@
         "outbound": "direct"
       },
       {
+        "rule_set": "geosite-dnsblock",
+        "action": "reject"
+      },
+      {
         "domain_suffix": [
           "vercel.app",
           "sntp.uk",
@@ -163,6 +167,7 @@
         "outbound": "apple"
       },
       {
+        "domain": "hk.lilyemby.my",
         "rule_set": [
           "cn_ip",
           "cn_domain"
