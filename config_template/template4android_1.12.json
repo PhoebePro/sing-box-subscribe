@@ -4,8 +4,7 @@
       {
         "tag": "dns_proxy",
         "type": "https",
-        "server": "8.8.8.8",
-        "detour": "proxy"
+        "server": "8.8.8.8"
       },
       {
         "tag": "dns_direct",
