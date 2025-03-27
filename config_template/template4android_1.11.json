@@ -83,11 +83,20 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "geosite-dnsblock",
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "port": 443
+          },
+          {
+            "protocol": "quic"
+          }
+        ],
         "action": "reject"
       },
       {
-        "protocol": "quic",
+        "rule_set": "geosite-dnsblock",
         "action": "reject"
       },
       {
