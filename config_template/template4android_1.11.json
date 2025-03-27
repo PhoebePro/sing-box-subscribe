@@ -87,6 +87,10 @@
         "action": "reject"
       },
       {
+        "protocol": "quic",
+        "action": "reject"
+      },
+      {
         "domain_suffix": [
           "vercel.app",
           "sntp.uk",
