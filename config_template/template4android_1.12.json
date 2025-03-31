@@ -4,12 +4,19 @@
       {
         "tag": "dns_proxy",
         "type": "https",
-        "server": "8.8.8.8",
+        "server": "1.1.1.1",
         "detour": "proxy"
       },
       {
         "tag": "dns_direct",
-        "type": "local"
+        "type": "https",
+        "server": "223.5.5.5"
+      },
+      {
+        "type": "fakeip",
+        "tag": "fakeip",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
       }
     ],
     "rules": [
@@ -21,11 +28,22 @@
       {
         "clash_mode": "Global",
         "action": "route",
-        "server": "dns_proxy"
+        "server": "fakeip"
+      },
+      {
+        "query_type": "HTTPS",
+        "action": "reject"
       },
       {
         "rule_set": "geosite-dnsblock",
         "action": "reject"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fakeip"
       },
       {
         "rule_set": "cn_domain",
@@ -509,7 +527,7 @@
       "route_exclude_address": [
         "192.168.0.0/16"
       ],
-      "stack": "system",
+      "stack": "mixed",
       "auto_route": true,
       "strict_route": true
     },
@@ -525,7 +543,8 @@
       "default_mode": "Rule"
     },
     "cache_file": {
-      "enabled": false
+      "enabled": true,
+      "store_fakeip": true
     }
   },
   "log": {
