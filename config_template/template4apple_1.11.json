@@ -1,10 +1,5 @@
 {
   "dns": {
-    "fakeip": {
-      "enable": true,
-      "inet4_range": "198.18.0.0/15",
-      "inet6_range": "fc00::/18"
-    },
     "servers": [
       {
         "tag": "dns_proxy",
@@ -59,6 +54,11 @@
         "server": "dns_direct"
       }
     ],
+    "fakeip": {
+      "enable": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
     "final": "dns_proxy",
     "independent_cache": true
   },
