@@ -452,10 +452,7 @@
             "0.20"
           ]
         }
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      ]
     },
     {
       "tag": "🇯🇵 JP",
@@ -476,10 +473,7 @@
             "0.20"
           ]
         }
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      ]
     },
     {
       "tag": "🇸🇬 SG",
@@ -500,10 +494,7 @@
             "0.20"
           ]
         }
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      ]
     },
     {
       "tag": "🇺🇸 US",
@@ -524,10 +515,7 @@
             "Austria|Russia|0.20"
           ]
         }
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      ]
     },
     {
       "tag": "direct",
