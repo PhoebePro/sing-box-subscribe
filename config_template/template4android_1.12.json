@@ -531,8 +531,15 @@
       "route_exclude_address": [
         "192.168.0.0/16"
       ],
-      "stack": "mixed",
-      "auto_route": true
+      "stack": "system",
+      "auto_route": true,
+      "platform": {
+        "http_proxy": {
+        "enabled": false,
+        "server": "127.0.0.1",
+        "server_port": 7890
+    }
+  },
     },
     {
       "type": "mixed",
